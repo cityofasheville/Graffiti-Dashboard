@@ -33,10 +33,9 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://dl.dropboxusercontent.com/u/24388865/20140623_123-Graffiti-Free-FLYER.pdf" target="_blank">Initiative Details</a></li>
-        <li><a href="http://www.ashevillenc.gov/Portals/0/city-documents/police/police_services/Asheville-Graffiti-Info.pdf" target="_blank">Graffiti Facts and Prevention</a></li>
         <li><a href="http://www.graffitihurts.org/" target="_blank">How Graffiti Hurts Cities</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">City of Asheville <b class="caret"></b></a>
+          <a class="dropdown-toggle" data-toggle="dropdown">City of Asheville <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="http://www.ashevillenc.gov/CityCouncil.aspx" target="_blank">Asheville City Council</a></li>
             <li><a href="http://www.ashevillenc.gov/Departments/Police.aspx">Asheville Police Department</a></li>
@@ -65,8 +64,9 @@
   <!-- Blurb and overview stats -->
   <div class="col-xs-12 col-sm-12 col-md-6">
     <div class="col-xs-12 well">
-      <p class="lead">Asheville City Council has a new graffiti initiative.</p>
-      <p>As new initiatives are developed to combat graffiti, the city wants to insure the initiatives are impactful. This dashboard demonstrates how the new graffiti initiative is impacting the city.</p>
+      <p class="lead">The City of Asheville is cleaning up graffiti.</p>
+      <p>As part of the 1-2-3 Graffiti Free initiative to clean up graffiti in Asheville, the city government is assisting property owners with graffiti removal. The city wants to ensure that this initiative is impactful, and has developed this dashboard to demonstrate how the initiative is impacting the city. </p>
+      <a class="btn btn-info pull-right" href="https://dl.dropboxusercontent.com/u/24388865/20140623_123-Graffiti-Free-FLYER.pdf" target="_blank">Learn More</a>
     </div>
     <div class="col-xs-12" style="padding-left : 0px; padding-right : 0px">
     <div class="panel panel-primary">
@@ -105,11 +105,11 @@
       <div class="panel-heading">Economic Impact</div>
       <div class="panel-body">
         <div class="col-xs-12 col-sm-5">
-            <h1 class="text-info center-text">${{investmentByCity}}</h1>
+            <h1 class="text-info center-text">${{investmentByCity|number}}</h1>
             <p class="text-info center-text">Investment By City</p>
         </div>
         <div class="col-xs-12 col-sm-7">
-            <h1 class="text-primary center-text">${{costToPropertyOwners}}</h1>
+            <h1 class="text-primary center-text">${{costToPropertyOwners|number}}</h1>
             <p class="text-primary center-text">Cost To Property Owners</p>
         </div>
         <div class="row">
@@ -119,7 +119,7 @@
         <div class="col-lg-10 col-lg-offset-1">
           <div class="progress progress-striped active" style = "background : #2b3e50; margin-bottom: 0px">
           <div class="progress-bar progress-bar-info" style="width: {{percentOfAllocatedFundsInvested}}">
-            ${{investmentByCity}}
+            ${{investmentByCity|number}}
           </div>
         </div>
           <p class="pull-left" style= "margin-top : 0px; margin-left : -10px" >$0</p>
