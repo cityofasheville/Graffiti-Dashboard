@@ -1,0 +1,404 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ie",
+				"ie-specific"
+			],
+			[
+				"de",
+				"dependencies"
+			],
+			[
+				"Pr",
+				"Property"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"compl",
+				"completedIcon"
+			],
+			[
+				"in",
+				"inprogress"
+			],
+			[
+				"gra",
+				"graffitiedIcon"
+			],
+			[
+				"cust",
+				"custom_fields"
+			],
+			[
+				"req",
+				"requestDetails"
+			],
+			[
+				"re",
+				"requestDetails"
+			],
+			[
+				"com",
+				"completed"
+			],
+			[
+				"custom",
+				"custom_field"
+			],
+			[
+				"request",
+				"request"
+			],
+			[
+				"dea",
+				"detailedRequestList"
+			],
+			[
+				"gen",
+				"generateGeoJsonFromDetailedRequestList"
+			],
+			[
+				"requ",
+				"requestList"
+			],
+			[
+				"ap",
+				"api_key"
+			],
+			[
+				"requestL",
+				"requestsList"
+			],
+			[
+				"feau",
+				"feature"
+			],
+			[
+				"geo",
+				"geoJson"
+			],
+			[
+				"r",
+				"requests"
+			],
+			[
+				"ge",
+				"geoJson"
+			],
+			[
+				"reque",
+				"requestDetails"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"retu",
+				"return_type"
+			],
+			[
+				"gr",
+				"graffitiInitStartDate"
+			],
+			[
+				"detail",
+				"detailMap"
+			],
+			[
+				"base",
+				"baseMaps"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 470,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 4855,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 60,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"g",
+				"Grunt"
+			],
+			[
+				"gr",
+				"Grunt"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 153.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Workspace/Graffiti-Dashboard/js/app.js",
+		"/C/Workspace/Graffiti-Dashboard/dev/index.html",
+		"/C/Workspace/Graffiti-App/Gruntfile.js",
+		"/C/Workspace/Graffiti-Initiative/Gruntfile.js",
+		"/C/Workspace/Graffiti-Dashboard/dependencies/css/bw-superhero-bootstrap.min.css",
+		"/C/Workspace/Graffiti-Dashboard/dev/js/Graffiti-Dashboard.js",
+		"/C/Workspace/Graffiti-Initiative/app/scripts/app.js",
+		"/C/Workspace/Graffiti-Initiative/app/index.html",
+		"/C/Workspace/Graffiti-Dashboard/index.html",
+		"/C/Workspace/Graffiti-Dashboard/app/index.html",
+		"/C/Workspace/Graffiti-Initiative/bower.json",
+		"/C/Workspace/Graffiti-Initiative/dist/public/robots.txt",
+		"/C/Workspace/Graffiti-App/app/views/navbar.html",
+		"/C/Workspace/Graffiti-Dashboard/Gruntfile.js",
+		"/C/Workspace/Graffiti-Dashboard/app/Gruntfile.js",
+		"/C/Workspace/Graffiti-Initiative/package.json",
+		"/C/Workspace/Graffiti-Initiative/app/favicon.ico",
+		"/C/Workspace/Yo-Test/app/index.html",
+		"/C/Workspace/Yo-Test/Gruntfile.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/**',",
+			"clea",
+			"9000",
+			"html",
+			"partial",
+			"conso",
+			"setTime",
+			"status",
+			"i",
+			"getReques",
+			"c"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"x",
+			"requestDetails"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"settings":
+					{
+						"buffer_size": 470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								425,
+								425
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Gruntfile.js",
+					"settings":
+					{
+						"buffer_size": 4855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								651,
+								651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/main.css",
+					"settings":
+					{
+						"buffer_size": 60,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								60
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 174.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"g",
+				"Gruntfile.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true
+}
