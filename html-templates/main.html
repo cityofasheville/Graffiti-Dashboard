@@ -151,7 +151,8 @@
           <div ng-repeat="request in requestsList">
             <hr style="margin-top : 10px; margin-bottom : 10px">
               <h4 class="text-info">
-                <a data-toggle="modal" ng-click="getRequestDetails(request.request)" data-target="#requestDetailsModal"><i class="fa fa-folder"></i> {{request.request.date_created*1000|date}} </a>
+                <a data-toggle="modal" ng-click="getRequestDetails(request.request)">
+                  <i class="fa fa-folder"></i> {{request.request.date_created*1000|date}} </a>
                 <span ng-if="request.request.status === 'in progress'" class="pull-right text-info">
                 <i class="fa fa-cog text-info"></i>
                 {{request.request.status | uppercase}}
