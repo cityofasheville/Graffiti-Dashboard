@@ -3,7 +3,7 @@
 var graffitiAvl = angular.module('graffitiAvl', [
   'ngRoute'
 ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'html-templates/main.html',
@@ -13,8 +13,8 @@ var graffitiAvl = angular.module('graffitiAvl', [
         redirectTo: '/'
       });
       
-    $locationProvider.html5Mode(true);
-  });
+
+  }]);
 'use strict';
 
 angular.module('graffitiAvl')
@@ -274,7 +274,7 @@ angular.module('graffitiAvl')
 'use strict';
 //This factory provides an api access to the Public Stuff API for the City of Asheville
 
-graffitiAvl.factory('geoJsonFact', function ($http, $q) {
+graffitiAvl.factory('geoJsonFact', ['$http', '$q', function ($http, $q) {
   	//instatiate the factory object
   	var geoJsonFact = {};
   	
@@ -300,11 +300,11 @@ graffitiAvl.factory('geoJsonFact', function ($http, $q) {
 
     //return the factory object
   	return geoJsonFact
-  });
+  }]);
 'use strict';
 //This factory provides an api access to the Public Stuff API for the City of Asheville
 
-graffitiAvl.factory('pubStuffFact', function ($http, $q) {
+graffitiAvl.factory('pubStuffFact', ['$http', '$q', function ($http, $q) {
   	//instatiate the factory object
   	var pubStuffFact = {};
   	//Private variables
@@ -451,4 +451,4 @@ graffitiAvl.factory('pubStuffFact', function ($http, $q) {
 
     //return the factory object
   	return pubStuffFact
-  });
+  }]);

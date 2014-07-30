@@ -1,7 +1,7 @@
 'use strict';
 //This factory provides an api access to the Public Stuff API for the City of Asheville
 
-graffitiAvl.factory('pubStuffFact', function ($http, $q) {
+graffitiAvl.factory('pubStuffFact', ['$http', '$q', function ($http, $q) {
   	//instatiate the factory object
   	var pubStuffFact = {};
   	//Private variables
@@ -148,4 +148,4 @@ graffitiAvl.factory('pubStuffFact', function ($http, $q) {
 
     //return the factory object
   	return pubStuffFact
-  });
+  }]);

@@ -3,7 +3,7 @@
 var graffitiAvl = angular.module('graffitiAvl', [
   'ngRoute'
 ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'html-templates/main.html',
@@ -13,5 +13,5 @@ var graffitiAvl = angular.module('graffitiAvl', [
         redirectTo: '/'
       });
       
-    $locationProvider.html5Mode(true);
-  });
+
+  }]);
