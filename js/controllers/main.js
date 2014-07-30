@@ -3,6 +3,7 @@
 angular.module('graffitiAvl')
   .controller('MainCtrl', ['$scope', '$filter', 'pubStuffFact','geoJsonFact', function ($scope, $filter, pubStuffFact, geoJsonFact) {
 
+  	L.Icon.Default.imagePath = 'dependencies/js/images';
   	$('#loadingModal').modal();
   	//Global variable for detailed map showing the details of request location
   	var requestLocation;
@@ -33,8 +34,8 @@ angular.module('graffitiAvl')
 	});
 
 	var baseMaps = {
-		"Aerial" : aerial,
-		"OSM" : osm
+		"OSM" : osm,
+		"Aerial" : aerial
 	};
 
 
@@ -42,7 +43,7 @@ angular.module('graffitiAvl')
 	var map = L.map('map', {
 		center: [35.5951125,-82.5511088], 
 		zoom : 13,
-		layers : [osm, aerial]});
+		layers : [aerial, osm]});
 
 
 	//Layer control for main map
@@ -186,11 +187,9 @@ angular.module('graffitiAvl')
 								if(requestsList.requests[x].request.custom_fields !== undefined){
 									for (var y = 0; y < requestsList.requests[x].request.custom_fields.length; y++) {
 										if(requestsList.requests[x].request.custom_fields[y].custom_field.name === "Graffiti Initiative Participant Property Type:"){
-											console.log(requestsList.requests[x].request.custom_fields[y].custom_field.value);
 											if(requestsList.requests[x].request.custom_fields[y].custom_field.value === "2: City Property" ||
 												requestsList.requests[x].request.custom_fields[y].custom_field.value === "3: Private Property"){
 												
-												console.log(requestsList.requests[x].request.custom_fields[y].custom_field.value);
 												detailedRequestList.push(requestsList.requests[x])
 											}
 												
@@ -228,12 +227,14 @@ angular.module('graffitiAvl')
 				$scope.requestDetails.costToPropertyOwner = Number(requestDetails.custom_fields[i].custom_field.value);
 			}
 		};
-		$scope.$apply();
+		//$scope.$apply();
 		$('#requestDetailsModal').modal();
-
-
-
 	};
+
+	$scope.closeRequestDetail = function(){
+		$scope.map = false;
+		detailMap.removeLayer(requestLocation);
+	}
 
 	$scope.posting = false;
 
