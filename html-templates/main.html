@@ -68,7 +68,7 @@
     </div>
     <div class="col-xs-12" style="padding-left : 0px; padding-right : 0px">
     <div class="panel panel-warning">
-      <div class="panel-heading" style = "color : black"><i class="fa fa-bar-chart-o"></i> Graffiti Removal Requests</div>
+      <div class="panel-heading" style = "color : black"><i class="fa fa-bar-chart-o"></i> Graffiti Removal Requests Summary</div>
       <div class="panel-body">
         <div class="col-xs-12 col-sm-4">
             <h1 class="text-info center-text">{{totalRequests}}</h1>
@@ -149,7 +149,7 @@
           <div ng-repeat="request in requestsList">
             <hr style="margin-top : 10px; margin-bottom : 10px">
               <h4 class="text-info">
-                <a data-toggle="modal" ng-click="getRequestDetails(request.request)">
+                <a data-toggle="modal" ng-click="getRequestDetails(request.request)" class = "text-warning">
                   <i class="fa fa-folder"></i> {{request.request.date_created*1000|date}} </a>
                 <span ng-if="request.request.status === 'in progress'" class="pull-right text-info">
                 <i class="fa fa-cog text-info"></i>
@@ -167,7 +167,9 @@
               
               <h4 class="media-heading">{{request.request.address}}</h4>
               <div class="col-xs-12 well">
-                <p class = "text-primary">Description:</p>
+                <p class = "text-warning">Request #: {{request.request.id}}</p>
+                
+                <p class = "text-warning">Description:</p>
                 {{request.request.description}}
               </div>
           </div>
