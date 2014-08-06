@@ -150,7 +150,7 @@
             <hr style="margin-top : 10px; margin-bottom : 10px">
               <h4 class="text-info">
                 <a data-toggle="modal" ng-click="getRequestDetails(request)" class = "text-warning">
-                  <i class="fa fa-folder"></i> {{request.DateCreated|date}} </a>
+                  <i class="fa fa-folder"></i> {{request.DateCreatedInMillseconds|date}} </a>
                 <span ng-if="request.Status === 'in progress'" class="pull-right text-info">
                 <i class="fa fa-cog text-info"></i>
                 {{request.Status | uppercase}}
