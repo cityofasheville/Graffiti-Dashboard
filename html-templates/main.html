@@ -296,12 +296,18 @@
       </div>
       <div class="modal-body">
         <table ng-table="tableParams" class="table">
-            <tr ng-repeat="user in $data">
-                <td data-title="'Name'" sortable="'name'">
-                    {{user.name}}
+            <tr ng-repeat="request in requestsList">
+                <td data-title="'RequestID'" sortable="'RequestID'">
+                    {{request.RequestID}}
                 </td>
-                <td data-title="'Age'" sortable="'age'">
-                    {{user.age}}
+                <td data-title="'Status'" sortable="'Status'">
+                    {{request.Status}}
+                </td>
+                <td data-title="'Address'" sortable="'Address'">
+                    {{request.Address}}
+                </td>
+                <td data-title="'Date Created'" sortable="'DateCreated'">
+                    {{request.DateCreated}}
                 </td>
             </tr>
         </table>
