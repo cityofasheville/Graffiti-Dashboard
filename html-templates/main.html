@@ -150,7 +150,7 @@
             <hr style="margin-top : 10px; margin-bottom : 10px">
               <h4 class="text-info">
                 <a data-toggle="modal" ng-click="getRequestDetails(request)" class = "text-warning">
-                  <i class="fa fa-folder"></i> {{request.request.date_created*1000|date}} </a>
+                  <i class="fa fa-folder"></i> {{request.DateCreated|date}} </a>
                 <span ng-if="request.Status === 'in progress'" class="pull-right text-info">
                 <i class="fa fa-cog text-info"></i>
                 {{request.Status | uppercase}}
@@ -214,7 +214,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeRequestDetail()">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">{{requestDetails.requestDate*1000|date}}</h4>
+        <h4 class="modal-title" id="myModalLabel">{{requestDetails.requestDate}}</h4>
       </div>
       <div class="modal-body">
         <div class="row">
