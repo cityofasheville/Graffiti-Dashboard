@@ -70,7 +70,7 @@
     <div class="panel panel-warning">
       <div class="panel-heading" style = "color : black"><i class="fa fa-bar-chart-o"></i> Graffiti Removal Requests Summary</div>
       <div class="panel-body">
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4" data-toggle="modal" data-target="#totalRequestsModal">
             <h1 class="text-info center-text">{{totalRequests}}</h1>
             <p class="text-info center-text">Total Requests</p>
         </div>
@@ -78,7 +78,7 @@
             <h1 class="text-primary center-text">{{open}}</h1>
             <p class="text-primary center-text">Open Requests</p>
         </div>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4" >
             <h1 class="text-success center-text">{{completed}}</h1>
             <p class="text-success center-text">Complete Requests</p>
         </div>
@@ -284,6 +284,28 @@
         <button ng-show="posting" type="button" class="btn btn-primary" style="width : 62px"><i class="fa fa-spinner fa-spin"></i></button>
 
       </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="totalRequestsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <table ng-table="tableParams" class="table">
+            <tr ng-repeat="user in $data">
+                <td data-title="'Name'" sortable="'name'">
+                    {{user.name}}
+                </td>
+                <td data-title="'Age'" sortable="'age'">
+                    {{user.age}}
+                </td>
+            </tr>
+        </table>
+      </div>
     </div>
   </div>
 </div>
