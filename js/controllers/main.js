@@ -34,8 +34,9 @@ angular.module('graffitiAvl')
 	});
 
 	var baseMaps = {
-		"OSM" : osm,
-		"Aerial" : aerial
+		"Aerial" : aerial,
+		"OSM" : osm
+		
 	};
 
 
@@ -70,7 +71,7 @@ angular.module('graffitiAvl')
 	var detailMap = L.map('detailMap', {
 		center: [35.5951125,-82.5511088], 
 		zoom : 14,
-		layers : [osmDetail, aerialDetail]});
+		layers : [aerialDetail, osmDetail]});
 
 	//Layer control for main map
 	var mapLayerControl = L.control.layers(baseMapsDetail).addTo(detailMap);
@@ -163,46 +164,69 @@ angular.module('graffitiAvl')
 		  		layer.on('click', function(){
 
 		  			$scope.getRequestDetails(feature.properties);
+		  			$scope.$apply();
 		        	
 		  		})
 		        
 		    }
 		}).addTo(map);
-		mapLayerControl.addOverlay(requestLocations);
+
 	}
 
 	var detailedRequestList = [];
 
-  	pubStuffFact.getListOfRequestTypes()
-  		//when promise resolves...
-  		.then(function(requestTypes){
-  			for (var i = 0; i < requestTypes.length; i++) {
-  				//We are interested in graffiti requests types; so we'll check request type by name
-		  		if(requestTypes[i].request_type.name === "Graffiti"){
-		  			var graffitiInitStartDate = new Date(2014, 5, 1, 0, 0, 0, 0);
-					pubStuffFact.getListOfRequests({ "verbose" : 1, "request_type_id" : requestTypes[i].request_type.id, "limit" : 1000, "after_timestamp" : graffitiInitStartDate.getTime()/1000})
-						.then(function(requestsList){
-							$('#loadingModal').modal('toggle');
-							for (var x = 0; x < requestsList.requests.length; x++) {
-								if(requestsList.requests[x].request.custom_fields !== undefined){
-									for (var y = 0; y < requestsList.requests[x].request.custom_fields.length; y++) {
-										if(requestsList.requests[x].request.custom_fields[y].custom_field.name === "Graffiti Initiative Participant Property Type:"){
-											if(requestsList.requests[x].request.custom_fields[y].custom_field.value === "2: City Property" ||
-												requestsList.requests[x].request.custom_fields[y].custom_field.value === "3: Private Property"){
+  	// pubStuffFact.getListOfRequestTypes()
+  	// 	//when promise resolves...
+  	// 	.then(function(requestTypes){
+  	// 		for (var i = 0; i < requestTypes.length; i++) {
+  	// 			//We are interested in graffiti requests types; so we'll check request type by name
+		 //  		if(requestTypes[i].request_type.name === "Graffiti"){
+		 //  			var graffitiInitStartDate = new Date(2014, 5, 1, 0, 0, 0, 0);
+			// 		pubStuffFact.getListOfRequests({ "verbose" : 1, "request_type_id" : requestTypes[i].request_type.id, "limit" : 1000, "after_timestamp" : graffitiInitStartDate.getTime()/1000})
+			// 			.then(function(requestsList){
+			// 				$('#loadingModal').modal('toggle');
+			// 				for (var x = 0; x < requestsList.requests.length; x++) {
+			// 					if(requestsList.requests[x].request.custom_fields !== undefined){
+			// 						for (var y = 0; y < requestsList.requests[x].request.custom_fields.length; y++) {
+			// 							if(requestsList.requests[x].request.custom_fields[y].custom_field.name === "Graffiti Initiative Participant Property Type:"){
+			// 								if(requestsList.requests[x].request.custom_fields[y].custom_field.value === "2: City Property" ||
+			// 									requestsList.requests[x].request.custom_fields[y].custom_field.value === "3: Private Property"){
 												
-												detailedRequestList.push(requestsList.requests[x])
-											}
+			// 									detailedRequestList.push(requestsList.requests[x])
+			// 								}
 												
-										}
-									};
-								}
-							};
-							generateStatsOnDetailedRequestList(detailedRequestList);
-							generateGeoJsonFromDetailedRequestList(detailedRequestList);
-						})
-				}
-		  	};
-  		});
+			// 							}
+			// 						};
+			// 					}
+			// 				};
+			// 				generateStatsOnDetailedRequestList(detailedRequestList);
+			// 				generateGeoJsonFromDetailedRequestList(detailedRequestList);
+			// 			})
+			// 	}
+		 //  	};
+  	// 	});
+
+	var processPublicStuffJson = function(){
+		var requestsList = pubstuff.response;
+		console.log(requestsList);
+		$('#loadingModal').modal('toggle');
+		for (var x = 0; x < requestsList.requests.length; x++) {
+			if(requestsList.requests[x].request.custom_fields !== undefined){
+				for (var y = 0; y < requestsList.requests[x].request.custom_fields.length; y++) {
+					if(requestsList.requests[x].request.custom_fields[y].custom_field.name === "Graffiti Initiative Participant Property Type:"){
+						if(requestsList.requests[x].request.custom_fields[y].custom_field.value === "2: City Property" ||
+							requestsList.requests[x].request.custom_fields[y].custom_field.value === "3: Private Property" ||
+							requestsList.requests[x].request.custom_fields[y].custom_field.value === "0: Pending"){
+							detailedRequestList.push(requestsList.requests[x])
+						}	
+					}
+				};
+			}
+		};
+		generateStatsOnDetailedRequestList(detailedRequestList);
+		generateGeoJsonFromDetailedRequestList(detailedRequestList);
+	}
+	processPublicStuffJson();
 
 	$scope.getRequestDetails =function (requestDetails){
 		//Update the view for the Details map

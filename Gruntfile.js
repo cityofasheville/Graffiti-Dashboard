@@ -36,10 +36,11 @@ module.exports = function(grunt) {
                     //These are leaflet's hardcode images
                     'dependencies/css/images/*.png',
                     'dependencies/js/images/*.png',
-                    'images/*.png',
+                    'images/*.{png,jpg,ico}',
                     'dependencies/fonts/*.{eot,svg,ttf,woff}',
                     'css/main.css',
-                    'html-templates/*.html'
+                    'html-templates/*.html',
+                    'data/data.js'
                 ],
                 dest : '<%= globalConfig.dev %>',
                 expand: false
@@ -51,10 +52,11 @@ module.exports = function(grunt) {
                     //These are leaflet's hardcode images
                     'dependencies/css/images/*.png',
                     'dependencies/js/images/*.png',
-                    'images/*.png',
+                    'images/*.{png,jpg,ico}',
                     'dependencies/fonts/*.{eot,svg,ttf,woff}',
                     'css/main.css',
-                    'html-templates/*.html'
+                    'html-templates/*.html',
+                    'data/data.js'
                 ],
                 dest : '<%= globalConfig.dist %>',
                 expand : false
