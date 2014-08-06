@@ -298,7 +298,7 @@
         <h4 class="modal-title" id="myModalLabel">All Participating Requests</h4>
       </div>
       <div class="modal-body">
-        <table ng-table="tableParams" class="table table-hover">
+        <table ng-table="totalRequestsTable" class="table table-hover">
             <tr ng-repeat="request in $data">
                 <td data-title="'RequestID'" >
                     {{request.RequestID}}
@@ -326,7 +326,7 @@
         <h4 class="modal-title" id="myModalLabel">Open Requests</h4>
       </div>
       <div class="modal-body">
-        <table ng-table="tableParams" class="table table-hover">
+        <table ng-table="openRequestsTable" class="table table-hover">
             <tr ng-repeat="request in $data">
                 <td data-title="'RequestID'" >
                     {{request.RequestID}}
@@ -354,7 +354,7 @@
         <h4 class="modal-title" id="myModalLabel">Completed Requests</h4>
       </div>
       <div class="modal-body">
-        <table ng-table="tableParams" class="table table-hover">
+        <table ng-table="completedRequestsTable" class="table table-hover">
             <tr ng-repeat="request in $data">
                 <td data-title="'RequestID'" >
                     {{request.RequestID}}
