@@ -199,6 +199,25 @@
       </div>
     </div>
   </div>
+  <div class="col-xs-12">
+    <table ng-table="tableParams" class="table">
+        <tr ng-repeat="request in requestsList">
+            <td data-title="'RequestID'" >
+                {{request.RequestID}}
+            </td>
+            <td data-title="'Status'" >
+                {{request.Status}}
+            </td>
+            <td data-title="'Address'" >
+                {{request.Address}}
+            </td>
+            <td data-title="'Date Created'" >
+                {{request.DateCreated}}
+            </td>
+        </tr>
+    </table>
+  </div>
+  
   <div class="col-xs-12 text-center" style = "margin-top : 20px; margin-bottom : 20px">
     <span>Created by</span>
     <a href="http://www.ashevillenc.gov/Departments/ITServices.aspx" target = "_blank">City of Asheville IT Services</a>
@@ -207,22 +226,7 @@
     <span>or grab the data </span>
     <a href="data/data.js" target = "_blank">here</a>
   </div> 
-  <table ng-table="tableParams" class="table">
-            <tr ng-repeat="request in requestsList">
-                <td data-title="'RequestID'" >
-                    {{request.RequestID}}
-                </td>
-                <td data-title="'Status'" >
-                    {{request.Status}}
-                </td>
-                <td data-title="'Address'" >
-                    {{request.Address}}
-                </td>
-                <td data-title="'Date Created'" >
-                    {{request.DateCreated}}
-                </td>
-            </tr>
-        </table> 
+
 </div>
 
 <div class="modal fade" id="requestDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
