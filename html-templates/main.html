@@ -316,7 +316,7 @@
       </div>
       <div class="modal-body">
         <table ng-table="tableParams" class="table">
-            <tr ng-repeat="request in requestsList">
+            <tr ng-repeat="request in $data">
                 <td data-title="'RequestID'" >
                     {{request.RequestID}}
                 </td>
