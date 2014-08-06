@@ -206,7 +206,23 @@
     <a href="https://github.com/cityofasheville/Graffiti-Dashboard" target = "_blank">GitHub <i class="fa fa-github"></i></a>
     <span>or grab the data </span>
     <a href="data/data.js" target = "_blank">here</a>
-  </div>  
+  </div> 
+  <table ng-table="tableParams" class="table">
+            <tr ng-repeat="request in requestsList">
+                <td data-title="'RequestID'" >
+                    {{request.RequestID}}
+                </td>
+                <td data-title="'Status'" >
+                    {{request.Status}}
+                </td>
+                <td data-title="'Address'" >
+                    {{request.Address}}
+                </td>
+                <td data-title="'Date Created'" >
+                    {{request.DateCreated}}
+                </td>
+            </tr>
+        </table> 
 </div>
 
 <div class="modal fade" id="requestDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
