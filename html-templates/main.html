@@ -149,28 +149,28 @@
           <div ng-repeat="request in requestsList">
             <hr style="margin-top : 10px; margin-bottom : 10px">
               <h4 class="text-info">
-                <a data-toggle="modal" ng-click="getRequestDetails(request.request)" class = "text-warning">
+                <a data-toggle="modal" ng-click="getRequestDetails(request)" class = "text-warning">
                   <i class="fa fa-folder"></i> {{request.request.date_created*1000|date}} </a>
-                <span ng-if="request.request.status === 'in progress'" class="pull-right text-info">
+                <span ng-if="request.Status === 'in progress'" class="pull-right text-info">
                 <i class="fa fa-cog text-info"></i>
-                {{request.request.status | uppercase}}
+                {{request.Status | uppercase}}
               </span>
-              <span ng-if="request.request.status === 'completed'" class="pull-right text-success">
+              <span ng-if="request.Status === 'completed'" class="pull-right text-success">
                 <span class="glyphicon glyphicon-ok text-success"></span>
-                {{request.request.status | uppercase}}
+                {{request.Status | uppercase}}
               </span>
-              <span ng-if="request.request.status === 'submitted'" class="pull-right text-danger">
+              <span ng-if="request.Status === 'submitted'" class="pull-right text-danger">
                 <i class="fa fa-file-text text-danger"></i>
-                {{request.request.status | uppercase}}
+                {{request.Status | uppercase}}
               </span>
               </h4>
               
-              <h4 class="media-heading">{{request.request.address}}</h4>
+              <h4 class="media-heading">{{request.Address}}</h4>
               <div class="col-xs-12 well">
-                <p class = "text-warning">Request #: {{request.request.id}}</p>
+                <p class = "text-warning">Request #: {{request.RequestID}}</p>
                 
                 <p class = "text-warning">Description:</p>
-                {{request.request.description}}
+                {{request.Description}}
               </div>
           </div>
           <hr>
