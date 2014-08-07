@@ -306,10 +306,10 @@
                 <td data-title="'Status'" >
                     {{request.Status}}
                 </td>
-                <td data-title="'Address'" class = "hidden-xs">
+                <td data-title="'Address'">
                     {{request.Address}}
                 </td>
-                <td data-title="'Date Created'" class = "hidden-xs hidden-sm">
+                <td data-title="'Date Created'">
                     {{request.DateCreated}}
                 </td>
             </tr>
@@ -328,16 +328,16 @@
       <div class="modal-body">
         <table ng-table="openRequestsTable" class="table table-hover">
             <tr ng-repeat="request in $data">
-                <td data-title="'RequestID'" >
+                <td data-title="'RequestID'" sortable="'RequestID'">
                     {{request.RequestID}}
                 </td>
-                <td data-title="'Status'" >
+                <td data-title="'Status'" sortable="'Status'">
                     {{request.Status}}
                 </td>
-                <td data-title="'Address'" class = "hidden-xs">
+                <td data-title="'Address'" sortable="'Address'">
                     {{request.Address}}
                 </td>
-                <td data-title="'Date Created'" class = "hidden-xs hidden-sm">
+                <td data-title="'Date Created'" sortable="'DateCreated'">
                     {{request.DateCreated}}
                 </td>
             </tr>
