@@ -211,7 +211,7 @@
 
 </div>
 
-<div class="modal fade" id="requestDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="requestDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style = "z-index : 2000">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -329,8 +329,8 @@
       </div>
       <div class="modal-body">
         <table ng-table="openRequestsTable" class="table table-hover">
-            <tr ng-repeat="request in $data" ng-click="getRequestDetails(request)">
-                <td data-title="'RequestID'" >
+            <tr ng-repeat="request in $data" >
+                <td data-title="'RequestID'" ng-click="getRequestDetails(request)" style = "cursor : pointer; text-decoration : underline">
                     {{request.RequestID}}
                 </td>
                 <td data-title="'Status'" >
