@@ -57,10 +57,10 @@
       <a href="https://www.facebook.com/CityofAsheville" target="_blank" class="btn btn-sm btn-info"><i class="fa fa-facebook"></i></a>
       <a href="https://twitter.com/CityofAsheville" target="_blank" class="btn btn-sm btn-info" target="_blank"><i class="fa fa-twitter"></i></a>
     </span>
-    <p >Email:</p>
-    <a href= "mailto:123graffitifree@ashevillenc.gov" >123graffitifree@ashevillenc.gov</a>
-    <p >Phone:</p>
-    <a href= "tel:1-828-259-5960" >1-828-259-5960</a>
+    <p>Email:</p>
+    <a href= "mailto:123graffitifree@ashevillenc.gov">123graffitifree@ashevillenc.gov</a>
+    <p>Phone:</p>
+    <a href= "tel:1-828-259-5960">1-828-259-5960</a>
     <hr style="margin-top : 10px; margin-bottom : 10px">
   </div>
   <!-- Blurb and overview stats -->
@@ -312,7 +312,7 @@
       <div class="modal-body">
         <table ng-table="totalRequestsTable" class="table table-hover">
             <tr ng-repeat="request in $data">
-                <td data-title="'RequestID'" >
+                <td data-title="'RequestID'" ng-click="getRequestDetails(request)" style = "cursor : pointer; text-decoration : underline" >
                     {{request.RequestID}}
                 </td>
                 <td data-title="'Status'" >
@@ -372,7 +372,7 @@
       <div class="modal-body">
         <table ng-table="completedRequestsTable" class="table table-hover">
             <tr ng-repeat="request in $data">
-                <td data-title="'RequestID'" >
+                <td data-title="'RequestID'" ng-click="getRequestDetails(request)" style = "cursor : pointer; text-decoration : underline">
                     {{request.RequestID}}
                 </td>
                 <td data-title="'Address'">
