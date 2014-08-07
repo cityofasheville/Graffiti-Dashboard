@@ -323,12 +323,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <button class="btn btn-default pull-right">CSV<i class="fa fa-cloud-download"></i></button>
+        <button class="btn btn-default pull-right" style = "margin-right : 15px">CSV<i class="fa fa-cloud-download"></i></button>
+        <button class="btn btn-default pull-right" style = "margin-right : 15px">JSON<i class="fa fa-cloud-download"></i></button>
         <h4 class="modal-title" id="myModalLabel">Open Requests</h4>
       </div>
       <div class="modal-body">
         <table ng-table="openRequestsTable" class="table table-hover">
-            <tr ng-repeat="request in $data">
+            <tr ng-repeat="request in $data" ng-click="getRequestDetails(request)">
                 <td data-title="'RequestID'" >
                     {{request.RequestID}}
                 </td>
