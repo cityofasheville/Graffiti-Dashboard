@@ -7,8 +7,8 @@ graffitiAvl.factory('pubStuffFact', ['$http', '$q', function ($http, $q) {
   	//Private variables
   	var client_id = 819;
   	var space_id = 3737;
-  	var api_key = "58j013k159vpqz87xd85df0uy7epvl";
-    //var api_key = "i952rk495itu254sx21141j2d3je3x";
+  	var api_key = "XXX";
+    //var api_key = "XXX";
 
     
 
